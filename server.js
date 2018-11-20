@@ -12,7 +12,8 @@ const profile = require("./controllers/profile");
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
+        //host: '127.0.0.1',
+        host: 'postgresql-cubic-51009',
         user: 'postgres',
         password: 'postgres',
         database: 'facerecognition'
