@@ -32,6 +32,7 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db); });
 app.post('/signin', (req, res) => { signin.handleSignIn (req, res, db, bcrypt); });
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt); });
 
-app.listen(3000, () => { console.log('app is running on port 3000'); });
+const port = process.env.PORT | 3000;
+app.listen(port, () => { console.log(`app is running on port ${port}`); });
 
 
